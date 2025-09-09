@@ -236,9 +236,7 @@ curl -X POST http://localhost:8000/predict \
 - Deploy behind a reverse proxy (nginx)
 - Use container orchestration (Kubernetes) for high availability
 
-## License
 
-This project is open source and available under the MIT License.
 
 ## Support
 
