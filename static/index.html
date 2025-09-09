@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Predictor</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Grade Predictor</h1>
+            <p>Predict final grades based on study habits and performance metrics</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <h2>Student Information</h2>
+                <form id="prediction-form">
+                    <div class="form-group">
+                        <label for="hours_studied">Hours Studied per Week:</label>
+                        <input type="number" id="hours_studied" min="0" max="50" step="0.1" value="15" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attendance">Attendance Percentage:</label>
+                        <input type="number" id="attendance" min="0" max="100" step="0.1" value="85" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previous_grade">Previous Grade:</label>
+                        <input type="number" id="previous_grade" min="0" max="100" step="0.1" value="75" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sleep_hours">Sleep Hours per Night:</label>
+                        <input type="number" id="sleep_hours" min="0" max="24" step="0.1" value="7" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="has_tutor"> Has Tutor
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="study_group"> Study Group Participation
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assignments_completion">Assignment Completion Percentage:</label>
+                        <input type="number" id="assignments_completion" min="0" max="100" step="0.1" value="90" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="extracurricular_hours">Extracurricular Hours per Week:</label>
+                        <input type="number" id="extracurricular_hours" min="0" max="50" step="0.1" value="3" required>
+                    </div>
+
+                    <button type="submit" class="predict-btn">Predict Grade</button>
+                </form>
+
+                <div id="prediction-result" class="result-section" style="display: none;">
+                    <h3>Prediction Result</h3>
+                    <div class="grade-display">
+                        <span class="grade-value" id="predicted-grade">--</span>
+                        <div class="grade-range">
+                            Range: <span id="grade-range">-- to --</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-section">
+                <div class="chart-container">
+                    <h3>Grade Distribution</h3>
+                    <canvas id="grade-chart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Feature Importance</h3>
+                    <canvas id="importance-chart"></canvas>
+                </div>
+
+                <div class="metrics-container">
+                    <h3>Model Performance</h3>
+                    <div id="metrics-display"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sample-data-section">
+            <h3>Sample Data</h3>
+            <div id="sample-data-table"></div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

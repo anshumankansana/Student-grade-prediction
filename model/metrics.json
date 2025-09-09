@@ -1,0 +1,20 @@
+{
+  "metrics": {
+    "train_r2": 0.9621794209804913,
+    "test_r2": 0.8508423117930669,
+    "train_rmse": 2.3178631792653417,
+    "test_rmse": 4.959500284062509,
+    "cv_r2_mean": 0.8364486079841097,
+    "cv_r2_std": 0.02220805926733312
+  },
+  "feature_importance": {
+    "hours_studied_per_week": 0.17406346250975935,
+    "attendance_percentage": 0.09333462946092057,
+    "previous_grade": 0.18464539975584288,
+    "sleep_hours_per_night": 0.01966051784189481,
+    "has_tutor": 0.01800169505749345,
+    "study_group_participation": 0.004631072538288697,
+    "assignments_completion_percentage": 0.4895454525906674,
+    "extracurricular_hours_per_week": 0.016117770245132782
+  }
+}
